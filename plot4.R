@@ -26,7 +26,7 @@ datetime <- paste(powershort$Date, powershort$Time)
 CombinedDateTime <- as.POSIXct(strptime(datetime, "%d/%m/%Y %H:%M:%S"))
 powershortnew <- cbind(CombinedDateTime, powershort)
 
-## plot Sub_metering data as line graphs over the two days and save to a png
+## plot all four graphs in one figure and save to a png
 if (!file.exists("plot4.png")) {
     png("plot4.png", width = 480, height = 480)
     
